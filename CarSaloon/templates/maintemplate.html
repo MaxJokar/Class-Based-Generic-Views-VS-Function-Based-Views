@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 
+        Car Saloon  |  {% block title %}{% endblock  %}
+    </title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}"> 
+    <link rel="stylesheet" href="{% static '/css/bootstrap-rtl.min.css' "> 
+     {% comment %} bootstrap should be checked , this one is not good and not active {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="/static/css/style.css">    {% endcomment %}
+    <!-- # 4 will added after we create css -->
+    {% comment %} if we make above Bootstrap syntax comment it  makes our website pink color otherwise it makes white  {% endcomment %}
+ 
+</head>
+<body class="rtl" >
+    {% include "partials/header.html" %}
+
+
+    <section class="main-content">
+
+            {% block content %}
+               content
+            {% endblock %}
+
+    </section>
+
+    <hr>
+    <hr>
+    <hr>
+    {% comment %} {% include "partials/footer.html" %} {% endcomment %}
+    {% comment %} {% include "partials/script.html" %}   {% endcomment %}
+
+
+</body>
+</html>
+ 
